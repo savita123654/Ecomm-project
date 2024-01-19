@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # EcomNewProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
@@ -25,3 +26,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+# Ecomm-project
+>>>>>>> 6de5d730a1bc8465b9a464c4d57173a55595f6a8
