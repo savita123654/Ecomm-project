@@ -70,7 +70,7 @@ export class ApisService {
     return this.httpclient.get<products[]>('http://localhost:3000/products?_limit=8');
   }
 
-  searchProducts(query: string) {
+  searchProducts(query: any) {
     return this.httpclient.get(`http://localhost:3000/products?q=${query}`);
   }
 

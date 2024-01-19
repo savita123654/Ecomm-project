@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   userData: any = [];
   input: any;
   inputValue: any;
+  searchedResults: any = [];
   constructor(private router: Router, private apiService: ApisService) { }
 
   logOut() {
@@ -23,12 +24,20 @@ export class HeaderComponent implements OnInit {
     this.userData = JSON.parse(localStorage.getItem("sellerData"));
   }
 
-  searchProducts(input: string) {
-    this.apiService.searchProducts(input).subscribe((res) => {
-      if (res) {
-        console.log(res)
-      }
-    })
+  searchProducts(input: KeyboardEvent) {
+    if (input) {
+      const element = input.target as HTMLInputElement;
+      this.apiService.searchProducts(element.value).subscribe((res: any) => {
+        if (res.length > 5) {
+          res.length = 5;
+        }
+        this.searchedResults = res;
+      })
+    }
+  }
+
+  hideSearch() {
+    this.searchedResults = undefined
   }
 
   ngOnInit(): void {

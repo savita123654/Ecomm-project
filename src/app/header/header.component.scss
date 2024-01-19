@@ -11,6 +11,8 @@
     }
 
     .input {
+        position: relative;
+
         input {
             flex: 1;
             color: blueviolet;
@@ -42,6 +44,21 @@
                 text-decoration: none;
                 cursor: pointer;
             }
+        }
+    }
+
+    .searchedResults {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+
+        li {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
         }
     }
 }
