@@ -1,0 +1,47 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        a {
+            text-decoration: none;
+            color: blueviolet;
+        }
+    }
+
+    .input {
+        input {
+            flex: 1;
+            color: blueviolet;
+            border: 1px solid blueviolet;
+            height: 35px;
+            padding: 0 0 0 10px;
+            border-right: 0;
+        }
+
+        button {
+            color: blueviolet;
+            border: 1px solid blueviolet;
+            height: 35px;
+            border-left: 0;
+        }
+    }
+
+    ul {
+        display: inline-flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding: 15px 0 0 15px;
+
+            a {
+                color: blueviolet;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+}

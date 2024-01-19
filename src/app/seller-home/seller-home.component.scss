@@ -1,0 +1,43 @@
+// .productList {
+//     .productItem {
+//         display: flex;
+//         justify-content: center;
+//         // align-items: center;
+//         flex-direction: column;
+//         box-shadow: 4px 5px 5px #aaaaaa;
+//         box-sizing: border-box;
+//         margin: 0 10px 10px 0;
+//         border: 1px solid #aaaaaa;
+//         padding: 10px;
+
+//         img {
+//             width: 250px;
+//             height: 250px;
+//         }
+
+//         .productName {
+//             font-size: 23px;
+//             color: #000;
+//         }
+
+//         .description {
+//             font-size: 12px;
+//             text-transform: capitalize;
+//             max-width: 250px;
+//             text-overflow: ellipsis;
+//             white-space: nowrap;
+//             overflow: hidden;
+//         }
+//     }
+// }
+
+.table {
+    tr {
+        td {
+            img {
+                width: 78px;
+                height: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+<div>
+    <h4>Product List</h4>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Category</th>
+                <th scope="col">Description</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of productList;let i=index;">
+                <th scope="row">{{product.id}}</th>
+                <td>
+                    <img src="{{product.image}}" alt="product image" />
+                </td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.category}}</td>
+                <td>{{product.description}}</td>
+                <td>
+                    <a class="btn btn-primary" routerLink='/seller-update-product/{{product.id}}'><fa-icon
+                            [icon]="faEdit"></fa-icon></a>
+                    <button class="btn btn-danger" (click)="deleteProduct(product)"><fa-icon
+                            [icon]="faCoffee"></fa-icon></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- <div class="productList d-flex flex-wrap">
+        <div *ngFor="let product of productList;let i=index;" class="productItem">
+            <div class="d-flex justify-content-end">
+
+                <a class="btn btn-primary" routerLink='/seller-update-product/{{product.id}}'><fa-icon
+                        [icon]="faEdit"></fa-icon></a>
+                <button class="btn btn-danger" (click)="deleteProduct(product)"><fa-icon
+                        [icon]="faCoffee"></fa-icon></button>
+            </div>
+            <img [src]="product.image" [alt]="product.image" />
+            <div>
+                <div class="productName">{{product.name }} - {{product.category}}</div>
+                <div class="price">Rs - <strong>{{product.price}}/-</strong></div>
+                <div class="description">{{product.description}}</div>
+            </div>
+        </div>
+    </div> -->
+</div>

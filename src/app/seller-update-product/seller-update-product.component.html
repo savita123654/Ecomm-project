@@ -1,0 +1,32 @@
+<div>
+    <h3>Update Product</h3>
+    <!-- <p *ngIf="productAdded" style="color: green;">Product added sucessfully!</p> -->
+    <div class="login row  w-100 d-flex justify-content-center">
+
+        <form class="col-md-5" [formGroup]="updateProductForm" (ngSubmit)="onSubmit(updateProductForm)">
+            <div class="mb-3 ">
+                <input type="text" class="form-control" formControlName="name" placeholder="Enter product name">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" formControlName="price" placeholder="Enter product price">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" formControlName="color" placeholder="Enter product color">
+            </div>
+
+            <div class="mb-3">
+                <input type="text" class="form-control" formControlName="category" placeholder="Enter product category">
+            </div>
+            <div class="mb-3">
+                <textarea rows="2" class="form-control" formControlName="description"
+                    placeholder="Enter product description"></textarea>
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" formControlName="image" placeholder="Enter product image">
+            </div>
+            <div class="mb-3 mt-3 d-flex justify-content-between align-items-center">
+                <button class="btn btn-primary" type="submit">update Product</button>
+            </div>
+        </form>
+    </div>
+</div>

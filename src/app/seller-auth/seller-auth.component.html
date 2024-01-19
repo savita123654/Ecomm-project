@@ -1,0 +1,48 @@
+<div class="container seller-auth">
+    <div class="signUp row w-100 d-flex justify-content-center" *ngIf="!iSloginIn">
+        <form class="col-md-5" [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+            <div class="mb-3 mt-3 ">
+                <input type="text" class="form-control" formControlName="name" placeholder="Your name">
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control" formControlName="password" placeholder="Your password">
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" formControlName="email" placeholder="Your email">
+            </div>
+            <div class="mb-3 mt-3 d-flex justify-content-between align-items-center">
+                <button class="btn btn-primary" type="submit">SignUp</button>
+                <div>
+                    Alredy have account <a style="color: blue;cursor: pointer;" (click)="loginFormIn()">
+                        Login
+                    </a>
+                </div>
+
+            </div>
+        </form>
+    </div>
+    <div class="login row  w-100 d-flex justify-content-center" *ngIf="iSloginIn">
+
+        <form class="col-md-5" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+            <h4 class="error d-flex justify-content-center">
+                {{authError}}
+            </h4>
+            <div class="mb-3 ">
+                <input type="email" class="form-control" formControlName="email" placeholder="Your email">
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control" formControlName="password" placeholder="Your password">
+            </div>
+            <div class="mb-3 mt-3 d-flex justify-content-between align-items-center">
+                <button class="btn btn-primary" type="submit">Login</button>
+                <div>
+                    Create account <a style="color: blue;cursor: pointer;" (click)="loginFormIn()">
+                        SignUp
+                    </a>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+</div>
