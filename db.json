@@ -1,0 +1,144 @@
+{
+  "seller": [
+    {
+      "name": "Savita",
+      "email": "savita@mail.com",
+      "password": "char@123",
+      "id": 1
+    },
+    {
+      "name": "Swapnil",
+      "email": "Swapnil@seller.com",
+      "password": "charvi@123",
+      "id": 2
+    },
+    {
+      "name": "sdd",
+      "password": "sdfsdfdsfsd",
+      "email": "dfsf",
+      "id": 3
+    },
+    {
+      "name": "charvi",
+      "password": "char",
+      "email": "char@fgng.vj",
+      "id": 4
+    },
+    {
+      "name": "fsf",
+      "password": "gdfddfgd",
+      "email": "fddf",
+      "id": 5
+    },
+    {
+      "name": "fsf",
+      "password": "gdfddfgd",
+      "email": "fddf",
+      "id": 6
+    },
+    {
+      "name": "dsfdsdf",
+      "password": "sdff",
+      "email": "sfds",
+      "id": 7
+    },
+    {
+      "name": "sad",
+      "password": "asddsad",
+      "email": "asdda",
+      "id": 8
+    },
+    {
+      "name": "let",
+      "password": "me",
+      "email": "check",
+      "id": 9
+    },
+    {
+      "name": "sddsd",
+      "password": "sdfds",
+      "email": "sdfdf",
+      "id": 10
+    },
+    {
+      "name": "",
+      "password": "",
+      "email": "",
+      "id": 11
+    }
+  ],
+  "products": [
+    {
+      "name": "honor 32",
+      "price": "12000",
+      "color": "blue",
+      "category": "mobile",
+      "description": "honored mobile in the industry very good one",
+      "image": "https://www.ineedamobile.com/wp-content/uploads/2019/03/iphone-x-600x598.png",
+      "id": 1
+    },
+    {
+      "name": "samsung galaxy",
+      "price": "560000",
+      "color": "blue",
+      "category": "xyz",
+      "description": "lorem ipsum",
+      "image": "https://i.gadgets360cdn.com/products/large/redmi-note-12-5g-pro-plus-db-gadgets360-800x600-1673019783.jpg?downsize=*:180",
+      "id": 2
+    },
+    {
+      "name": "new phone",
+      "price": "56325",
+      "color": "blue",
+      "category": "mobile",
+      "description": "Viewing alpha v1 documentation – usable but expect breaking changes. For stable version, see here\n\n",
+      "image": "https://www.ineedamobile.com/wp-content/uploads/2019/03/iphone-x-600x598.png",
+      "id": 3
+    },
+    {
+      "name": "Iphone 12",
+      "price": "56546",
+      "color": "green",
+      "category": "moile",
+      "description": "Viewing alpha v1 documentation – usable but expect breaking changes. For stable version, see here\n\n",
+      "image": "https://www.ineedamobile.com/wp-content/uploads/2019/03/iphone-x-600x598.png",
+      "id": 4
+    },
+    {
+      "name": "my phone",
+      "price": "555000",
+      "color": "lightblue",
+      "category": "mobi",
+      "description": "image",
+      "image": "https://www.ineedamobile.com/wp-content/uploads/2019/03/iphone-x-600x598.png",
+      "id": 5
+    },
+    {
+      "name": "vivo 15 pro",
+      "price": "17000",
+      "color": "black",
+      "category": "bigggggggg",
+      "description": " dasdu asifew wei sfiweoiogi adisfiofhqeh ckjhfiefjbvds sfiahfwioqmneqf bqw qwfiewf fe w",
+      "image": "https://i.gadgets360cdn.com/products/large/redmi-note-12-5g-pro-plus-db-gadgets360-800x600-1673019783.jpg?downsize=*:180",
+      "id": 6
+    },
+    {
+      "name": "realme",
+      "price": "239000",
+      "color": "white",
+      "category": "mobile",
+      "description": "Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element",
+      "image": "https://www.ineedamobile.com/wp-content/uploads/2019/03/iphone-x-600x598.png",
+      "id": 7
+    },
+    {
+      "name": "Poco c396",
+      "price": "9600",
+      "color": "grey",
+      "category": "jfhjsf",
+      "description": "Use border utilities to quickly style the border and border-radius of an element. ",
+      "image": "https://www.ineedamobile.com/wp-content/uploads/2019/03/iphone-x-600x598.png",
+      "id": 8
+    }
+  ]
+}
