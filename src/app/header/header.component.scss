@@ -2,6 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    background: #06315c;
+    width: 100%;
+    padding: 0 10px;
 
     h1 {
         a {
@@ -37,10 +41,12 @@
         margin: 0;
 
         li {
-            padding: 15px 0 0 15px;
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
 
             a {
-                color: blueviolet;
+                color: white;
                 text-decoration: none;
                 cursor: pointer;
             }
@@ -53,12 +59,16 @@
         background-color: #fff;
         width: 100%;
         position: absolute;
-        z-index: 1;
+        z-index: 1000;
 
         li {
             display: flex;
             align-items: center;
             cursor: pointer;
+
+            a {
+                cursor: pointer;
+            }
         }
     }
 }

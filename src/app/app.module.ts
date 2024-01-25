@@ -14,6 +14,14 @@ import { SellerAddProductComponent } from './seller-add-product/seller-add-produ
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SearchComponent } from './search/search.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { UserAuthComponent } from './user-auth/user-auth.component';
+import { FooterComponent } from './footer/footer.component';
+import { utilsService } from './services/utils.service';
+import { CommonModule } from '@angular/common';
+import { ButtonModule } from 'primeng/button';
+import { PrimengModule } from './primeNg.module';
 
 @NgModule({
   declarations: [
@@ -23,18 +31,24 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SellerAuthComponent,
     SellerHomeComponent,
     SellerAddProductComponent,
-    SellerUpdateProductComponent
+    SellerUpdateProductComponent,
+    SearchComponent,
+    ProductDetailsComponent,
+    UserAuthComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     FontAwesomeModule,
-    NgbModule
+    NgbModule,
+    PrimengModule
   ],
-  providers: [ApisService],
+  providers: [ApisService, utilsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,63 @@
+<div class="d-flex align-items-center flex-column userAuth mt-4" *ngIf="isLoginUser">
+    <h4 class="mb-3 mt-3">User Sign-up</h4>
+    <form class="col-md-3" [formGroup]="signUpForm" (ngSubmit)="onSubmit(signUpForm.value)">
+        <div class="mb-3 ">
+            <input type="text" class="form-control" formControlName="name" placeholder="Enter user name">
+        </div>
+        <div class="mb-3">
+            <input type="email" class="form-control" formControlName="email" placeholder="Enter user email" required>
+        </div>
+        <div class="mb-3">
+            <input type="password" class="form-control" formControlName="password" placeholder="Enter user password"
+                required>
+        </div>
+
+        <div class="mb-3 mt-3 d-flex justify-content-center align-items-center flex-column">
+            <button class="btn btn-primary w-100" type="submit">Sign-up</button>
+            <div>
+                Alredy have account? <a style="color: blue;cursor: pointer;" (click)="loginFormIn()">
+                    Login
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="login d-flex align-items-center flex-column userAuth mt-4" *ngIf="!isLoginUser">
+    <h4 class="mb-3 mt-3">User Login</h4>
+    <form class="col-md-3" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+
+        <div class="mb-3">
+            <input type="email" class="form-control" formControlName="email" placeholder="Enter user email" required>
+            <div *ngIf="loginForm?.controls['email'].invalid && loginForm?.controls['email'].errors?.['required'] && (loginForm?.controls['email'].dirty || loginForm?.controls['email'].touched)"
+                class="error">
+                Email is required.
+            </div>
+            <div class="error" *ngIf="loginForm?.controls['email'].errors?.['email']">
+                Email must be a valid email address
+            </div>
+
+        </div>
+        <div class="mb-3">
+            <input type="password" class="form-control" formControlName="password" placeholder="Enter user password"
+                required>
+            <div *ngIf="loginForm?.controls['password'].invalid && 
+                loginForm?.controls['password'].errors?.['required'] &&
+                 (loginForm?.controls['password'].dirty ||
+                 loginForm?.controls['password'].touched)" class="error">
+                password is required.
+            </div>
+            <!-- <div class="error" *ngIf="loginForm?.controls['email'].errors?.['email']">
+                    Email must be a valid email address
+                </div> -->
+        </div>
+        <p class="error">{{loginFailed}}</p>
+        <div class="mb-3 mt-3 d-flex justify-content-center align-items-center flex-column">
+            <button [disabled]="loginForm.invalid" class="btn btn-primary w-100" type="submit">Login</button>
+            <div>
+                Create account <a style="color: blue;cursor: pointer;" (click)="loginFormIn()">
+                    SignUp
+                </a>
+            </div>
+        </div>
+    </form>
+</div>

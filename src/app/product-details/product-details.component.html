@@ -1,0 +1,27 @@
+<div class="container mt-3 productDetails" *ngIf="produtDetals">
+    <div class="row items mb-3">
+        <div class="col-md-6">
+            <img class="w-100" src="{{produtDetals.image}}" alt="" />
+        </div>
+        <div class="col-md-6 pl-3">
+            <h5>Product Name: {{produtDetals.name | titlecase}} </h5>
+            <p>Product Category: {{produtDetals.category | titlecase}}</p>
+            <p>Price: Rs. {{produtDetals.price}} /- </p>
+            <h5>Color:</h5>
+            <div class="color" [style.backgroundColor]="produtDetals.color"></div>
+            <p>{{produtDetals.description}}</p>
+            <div class="d-flex align-items-center mb-3">
+                <button class="btn btn-secondary" *ngIf="!removeCart" (click)="addToCart(produtDetals)">Add to
+                    Cart</button>
+                <button class="btn btn-danger" *ngIf="removeCart" (click)="removeToCart(produtDetals?.id)">Remove to
+                    Cart</button>
+                <button class="btn btn-warning">Buy Now</button>
+            </div>
+            <div class="w-50 d-flex  align-items-center mt-3">
+                <button class="btn btn-dark" (click)="addItems('minus')">-</button>
+                <input class="w-100 inputValue" type="text" name="customNum" #item [(ngModel)]="customNum" />
+                <button class="btn btn-dark" (click)="addItems('add')">+</button>
+            </div>
+        </div>
+    </div>
+</div>

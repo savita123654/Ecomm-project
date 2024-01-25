@@ -13,7 +13,6 @@ export class SellerAddProductComponent {
   productAdded: boolean = false;
 
   onSubmit(form: FormGroup): any {
-    console.log(form.value);
     this.apiservice.addProducts(form.value).subscribe((result) => {
       if (result) {
         this.productAdded = true;

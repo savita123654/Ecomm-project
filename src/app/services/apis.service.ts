@@ -1,6 +1,6 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Login, SignUp, products } from '../data-type';
+import { Login, SignUp, cart, products } from '../data-type';
 import { BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
 @Injectable({
@@ -10,6 +10,7 @@ export class ApisService {
   isSellerLoggedIn = new BehaviorSubject<boolean>(false);
   constructor(private httpclient: HttpClient, private router: Router) { }
   isLoginError = new EventEmitter(false);
+  cartItems = new EventEmitter();
   userSignUp(data: SignUp) {
     this.httpclient.post('http://localhost:3000/seller',
       data,
@@ -74,4 +75,42 @@ export class ApisService {
     return this.httpclient.get(`http://localhost:3000/products?q=${query}`);
   }
 
+  localAddCart(product: products) {
+    let cartLocal = [];
+    let localCart = localStorage.getItem('localCart')
+    if (!localCart) {
+      localStorage.setItem("localCart", JSON.stringify([product]));
+      this.cartItems.emit(product);
+    } else {
+      cartLocal = JSON.parse(localCart);
+      cartLocal.push(product);
+      localStorage.setItem("localCart", JSON.stringify(cartLocal));
+      this.cartItems.emit(cartLocal);
+    }
+
+  }
+
+
+  removeCart(productId) {
+    let cartData = JSON.parse(localStorage.getItem("localCart"));
+    if (productId && cartData.length) {
+      cartData = cartData.filter(element => (element.id != productId));
+      localStorage.setItem('localCart', JSON.stringify(cartData));
+    }
+    this.cartItems.emit(cartData);
+  }
+
+  addTocart(data: cart) {
+    return this.httpclient.post('http://localhost:3000/cart', data);
+  }
+
+  getCartItems(userId: number) {
+    return this.httpclient.get<products[]>('http://localhost:3000/cart?userId=' + userId,
+      { observe: 'response' })
+      .subscribe((res) => {
+        if (res && res.body) {
+          this.cartItems.emit(res.body);
+        }
+      });
+  }
 }

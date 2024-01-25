@@ -2,24 +2,33 @@
     <h1><a routerLink="/">E-COMM</a> </h1>
     <div class="input" *ngIf="menuType ==='default'">
         <!-- <input type="text" placeholder="search" [(ngModel)]="inputValue" (blur)="searchProducts(inputValue)" /> -->
-        <input type="text" placeholder="search" (keyup)="searchProducts($event)" (blur)="hideSearch()" />
-        <button>Search</button>
+        <input type="text" #searchedInput placeholder="search" (keyup)="searchProducts($event)" (blur)="hideSearch()" />
+        <button (click)="submitsearch(searchedInput.value)">Search</button>
         <ul class="searchedResults" *ngIf="searchedResults">
-            <li *ngFor="let name of searchedResults;let i =index;">{{name.name}}</li>
+            <li *ngFor="let name of searchedResults;let i =index;">
+                <a (mousedown)="redirectToDetails(name.id)"> {{name.name}}</a>
+            </li>
         </ul>
     </div>
     <div [ngSwitch]="menuType">
         <ul *ngSwitchCase="'default'">
             <li><a routerLink="/seller-auth">Seller</a> </li>
             <li><a routerLink="/">Home</a> </li>
-            <li><a href="#">Login</a> </li>
-            <li><a href="#">Cart(0)</a> </li>
+            <li><a routerLink="/user-auth">Login/Sign-up</a> </li>
+            <li><a href="#">Cart({{cartCount}})</a> </li>
+        </ul>
+        <ul *ngSwitchCase="'user'">
+            <li><a routerLink="/seller-auth">Seller</a> </li>
+            <li><a routerLink="/">Home</a> </li>
+            <li><a routerLink="">{{userData[0].name | titlecase}}</a> </li>
+            <li><button class="btn btn-dark" (click)="logoutUser()">Logout</button> </li>
+            <li><a href="#">Cart({{cartCount}})</a> </li>
         </ul>
         <ul *ngSwitchCase="'seller'">
             <li><a routerLink="/seller-home">List</a> </li>
             <li><a routerLink="seller-add-product">Add Product</a> </li>
             <li><a (click)="logOut()">Logout</a> </li>
-            <li><a href="#">{{userData[0].name | titlecase}}</a> </li>
+            <li><a href="#">{{sellerData[0].name | titlecase}}</a> </li>
         </ul>
     </div>
 </nav>

@@ -1,0 +1,28 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+    padding-top: 10px;
+
+    ul {
+        display: inline-flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+
+            a {
+                color: blueviolet;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+}

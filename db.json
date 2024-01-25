@@ -139,6 +139,192 @@
       "description": "Use border utilities to quickly style the border and border-radius of an element. ",
       "image": "https://www.ineedamobile.com/wp-content/uploads/2019/03/iphone-x-600x598.png",
       "id": 8
+    },
+    {
+      "name": "dell laptop",
+      "price": "450000",
+      "color": "blue",
+      "category": "laptop",
+      "description": "good laptop in the industry",
+      "image": "https://www.ineedamobile.com/wp-content/uploads/2019/03/iphone-x-600x598.png",
+      "id": 9
+    }
+  ],
+  "users": [
+    {
+      "name": "savita",
+      "email": "savita@test.com",
+      "password": "savi@123",
+      "id": 1
+    },
+    {
+      "name": "teee",
+      "email": "tee@fh.jj",
+      "password": "tee",
+      "id": 3
+    },
+    {
+      "name": "test",
+      "email": "test@test.io",
+      "password": "test",
+      "id": 4
+    }
+  ],
+  "cart": [
+    {
+      "name": "realme",
+      "price": "239000",
+      "color": "white",
+      "category": "mobile",
+      "description": "Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element",
+      "image": "https://www.ineedamobile.com/wp-content/uploads/2019/03/iphone-x-600x598.png",
+      "quantity": 1,
+      "productId": 7,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "name": "new phone",
+      "price": "56325",
+      "color": "blue",
+      "category": "mobile",
+      "description": "Viewing alpha v1 documentation – usable but expect breaking changes. For stable version, see here\n\n",
+      "image": "https://www.ineedamobile.com/wp-content/uploads/2019/03/iphone-x-600x598.png",
+      "quantity": 1,
+      "productId": 3,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "name": "vivo 15 pro",
+      "price": "17000",
+      "color": "black",
+      "category": "bigggggggg",
+      "description": " dasdu asifew wei sfiweoiogi adisfiofhqeh ckjhfiefjbvds sfiahfwioqmneqf bqw qwfiewf fe w",
+      "image": "https://i.gadgets360cdn.com/products/large/redmi-note-12-5g-pro-plus-db-gadgets360-800x600-1673019783.jpg?downsize=*:180",
+      "quantity": 1,
+      "productId": 6,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "name": "Poco c396",
+      "price": "9600",
+      "color": "grey",
+      "category": "jfhjsf",
+      "description": "Use border utilities to quickly style the border and border-radius of an element. ",
+      "image": "https://www.ineedamobile.com/wp-content/uploads/2019/03/iphone-x-600x598.png",
+      "quantity": 1,
+      "productId": 8,
+      "id": 4
+    },
+    {
+      "name": "samsung galaxy",
+      "price": "560000",
+      "color": "blue",
+      "category": "xyz",
+      "description": "lorem ipsum",
+      "image": "https://i.gadgets360cdn.com/products/large/redmi-note-12-5g-pro-plus-db-gadgets360-800x600-1673019783.jpg?downsize=*:180",
+      "quantity": 1,
+      "productId": 2,
+      "userId": 4,
+      "id": 5
+    },
+    {
+      "name": "honor 32",
+      "price": "12000",
+      "color": "blue",
+      "category": "mobile",
+      "description": "honored mobile in the industry very good one",
+      "image": "https://www.ineedamobile.com/wp-content/uploads/2019/03/iphone-x-600x598.png",
+      "quantity": 1,
+      "productId": 1,
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "name": "honor 32",
+      "price": "12000",
+      "color": "blue",
+      "category": "mobile",
+      "description": "honored mobile in the industry very good one",
+      "image": "https://www.ineedamobile.com/wp-content/uploads/2019/03/iphone-x-600x598.png",
+      "quantity": 1,
+      "productId": 1,
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "name": "honor 32",
+      "price": "12000",
+      "color": "blue",
+      "category": "mobile",
+      "description": "honored mobile in the industry very good one",
+      "image": "https://www.ineedamobile.com/wp-content/uploads/2019/03/iphone-x-600x598.png",
+      "quantity": 1,
+      "productId": 1,
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "name": "honor 32",
+      "price": "12000",
+      "color": "blue",
+      "category": "mobile",
+      "description": "honored mobile in the industry very good one",
+      "image": "https://www.ineedamobile.com/wp-content/uploads/2019/03/iphone-x-600x598.png",
+      "quantity": 1,
+      "productId": 1,
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "name": "honor 32",
+      "price": "12000",
+      "color": "blue",
+      "category": "mobile",
+      "description": "honored mobile in the industry very good one",
+      "image": "https://www.ineedamobile.com/wp-content/uploads/2019/03/iphone-x-600x598.png",
+      "quantity": 1,
+      "productId": 1,
+      "userId": 1,
+      "id": 10
+    },
+    {
+      "name": "vivo 15 pro",
+      "price": "17000",
+      "color": "black",
+      "category": "bigggggggg",
+      "description": " dasdu asifew wei sfiweoiogi adisfiofhqeh ckjhfiefjbvds sfiahfwioqmneqf bqw qwfiewf fe w",
+      "image": "https://i.gadgets360cdn.com/products/large/redmi-note-12-5g-pro-plus-db-gadgets360-800x600-1673019783.jpg?downsize=*:180",
+      "quantity": 1,
+      "productId": 6,
+      "userId": 4,
+      "id": 11
+    },
+    {
+      "name": "my phone",
+      "price": "555000",
+      "color": "lightblue",
+      "category": "mobi",
+      "description": "image",
+      "image": "https://www.ineedamobile.com/wp-content/uploads/2019/03/iphone-x-600x598.png",
+      "quantity": 1,
+      "productId": 5,
+      "userId": 1,
+      "id": 12
+    },
+    {
+      "name": "Poco c396",
+      "price": "9600",
+      "color": "grey",
+      "category": "jfhjsf",
+      "description": "Use border utilities to quickly style the border and border-radius of an element. ",
+      "image": "https://www.ineedamobile.com/wp-content/uploads/2019/03/iphone-x-600x598.png",
+      "quantity": 1,
+      "productId": 8,
+      "userId": 4,
+      "id": 13
     }
   ]
 }

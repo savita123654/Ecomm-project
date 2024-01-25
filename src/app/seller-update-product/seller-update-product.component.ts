@@ -9,10 +9,10 @@ import { ApisService } from '../services/apis.service';
   styleUrls: ['./seller-update-product.component.scss']
 })
 export class SellerUpdateProductComponent {
-  updateProductForm: UntypedFormGroup;
+  updateProductForm: FormGroup;
   productDetails: any;
   productId;
-  constructor(private route: ActivatedRoute, private router: Router, private fb: UntypedFormBuilder, private apiService: ApisService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private fb: FormBuilder, private apiService: ApisService) { }
 
   onSubmit(form: FormGroup) {
     this.apiService.editProduct(this.productId, form.value).subscribe((res) => {
@@ -33,18 +33,18 @@ export class SellerUpdateProductComponent {
 
   initupdateForm() {
     this.updateProductForm = this.fb.group({
-      name: [this.productDetails.name || ''],
-      price: [this.productDetails.price || null],
-      color: [this.productDetails.color || null],
-      category: [this.productDetails.category || null],
-      description: [this.productDetails.description || null],
+      name: [this.productDetails?.name || null],
+      price: [this.productDetails?.price || null],
+      color: [this.productDetails?.color || null],
+      category: [this.productDetails?.category || null],
+      description: [this.productDetails?.description || null],
       image: ['https://www.ineedamobile.com/wp-content/uploads/2019/03/iphone-x-600x598.png']
     });
   }
 
   ngOnInit() {
-    this.productId = this.route.snapshot.paramMap.get('id');
-    this.getProductDetails(this.productId);
-    this.updateProductForm.patchValue(this.productDetails)
+    this.productId = this.route.snapshot?.paramMap.get('id');
+    this.productId && this.getProductDetails(this.productId);
+    this.initupdateForm();
   }
 }

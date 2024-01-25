@@ -3,6 +3,11 @@
     justify-content: center;
     background: #6b6b6b;
 
+    a {
+        cursor: pointer;
+        z-index: 1;
+    }
+
     img {
         width: 500px;
         height: 450px;
@@ -12,6 +17,7 @@
 
 .carousel-caption {
     background-color: #00000061;
+    z-index: 1;
 }
 
 .productList {
