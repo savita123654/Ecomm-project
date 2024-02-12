@@ -1,6 +1,6 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Login, SignUp, cart, products } from '../data-type';
+import { Login, SignUp, cart, orderData, products } from '../data-type';
 import { BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
 @Injectable({
@@ -107,10 +107,39 @@ export class ApisService {
   getCartItems(userId: number) {
     return this.httpclient.get<products[]>('http://localhost:3000/cart?userId=' + userId,
       { observe: 'response' })
-      .subscribe((res) => {
+      .subscribe((res: any) => {
         if (res && res.body) {
           this.cartItems.emit(res.body);
         }
       });
+  }
+
+  removeToCart(cartId: number) {
+    return this.httpclient.delete('http://localhost:3000/cart/' + cartId);
+  }
+
+  orderNow(data: orderData) {
+    return this.httpclient.post('http://localhost:3000/orders', data);
+  }
+
+  getOrders(userId) {
+    return this.httpclient.get('http://localhost:3000/orders?userId=' + userId)
+  }
+
+  deleteCartItems(cartId) {
+    this.httpclient.delete('http://localhost:3000/cart/' + cartId,
+      { observe: 'response' })
+      .subscribe((res) => {
+        if (res) {
+          this.cartItems.emit([]);
+        }
+      })
+  }
+
+  cancelOrder(orderId: number) {
+    return this.httpclient.delete('http://localhost:3000/orders/' + orderId);
+  }
+  updateQuantity(id, data) {
+    return this.httpclient.put(`http://localhost:3000/cart/${id}`, data);
   }
 }

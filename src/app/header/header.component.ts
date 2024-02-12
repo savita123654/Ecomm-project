@@ -68,6 +68,7 @@ export class HeaderComponent implements OnInit {
         } else if (localStorage.getItem('users')) {
           this.menuType = "user";
           this.userData = JSON.parse(localStorage.getItem('users'));
+          this.apiService.getCartItems(this.userData[0].id);
         } else {
           this.menuType = "default"
         }
@@ -84,11 +85,13 @@ export class HeaderComponent implements OnInit {
     this.apiService.cartItems.subscribe((res) => {
       this.cartCount = res.length;
     })
+
   }
 
   ngOnInit(): void {
     this.selectMenuType();
     this.getCartCount();
+
   }
 
 

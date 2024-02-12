@@ -22,6 +22,9 @@ import { utilsService } from './services/utils.service';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { PrimengModule } from './primeNg.module';
+import { CartPageComponent } from './cart-page/cart-page.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { PrimengModule } from './primeNg.module';
     SearchComponent,
     ProductDetailsComponent,
     UserAuthComponent,
-    FooterComponent
+    FooterComponent,
+    CheckoutComponent,
+    CartPageComponent,
+    MyOrdersComponent
   ],
   imports: [
     BrowserModule,

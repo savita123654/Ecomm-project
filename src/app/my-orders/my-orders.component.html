@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="py-5 text-center">
+
+        <h2>My Orders</h2>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2 order-md-2 mb-2">
+            <div>Order</div>
+
+        </div>
+        <div class="col-md-2 order-md-2 mb-2">
+            <div>Order Id</div>
+
+        </div>
+        <div class="col-md-2 order-md-2 mb-2">
+            <div>Price</div>
+
+        </div>
+        <div class="col-md-2 order-md-2 mb-2">
+            <div>status</div>
+
+        </div>
+        <div class="col-md-2 order-md-2 mb-2">
+            Action
+
+        </div>
+    </div>
+    <hr style="border: 3px solid #333;" />
+    <div class="row" *ngFor="let cart of myOrders">
+        <div class="col-md-2 order-md-2 mb-4">
+            <fa-icon [icon]="cartIcon"></fa-icon>
+        </div>
+        <div class="col-md-2 order-md-2 mb-4">
+            <div>#{{cart.id}}</div>
+        </div>
+        <div class="col-md-2 order-md-2 mb-4">
+            <div>{{cart.totalPrice}}</div>
+        </div>
+        <div class="col-md-2 order-md-2 mb-4">
+            <div>In progress</div>
+        </div>
+        <div class="col-md-2 order-md-2 mb-4">
+            <!-- <fa-icon [icon]="trash"></fa-icon> -->
+            <button class="btn btn-danger" (click)="cancelOrder(cart.id)">Cancel Order</button>
+        </div>
+    </div>
+    <hr class="hLine" />

@@ -13,7 +13,8 @@
             <div class="d-flex align-items-center mb-3">
                 <button class="btn btn-secondary" *ngIf="!removeCart" (click)="addToCart(produtDetals)">Add to
                     Cart</button>
-                <button class="btn btn-danger" *ngIf="removeCart" (click)="removeToCart(produtDetals?.id)">Remove to
+                <button class="btn btn-danger" *ngIf="removeCart" (click)="removeToCart(produtDetals?.productId)">Remove
+                    to
                     Cart</button>
                 <button class="btn btn-warning">Buy Now</button>
             </div>

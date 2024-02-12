@@ -11,8 +11,9 @@ import { trigger } from '@angular/animations';
 })
 export class ProductDetailsComponent {
   customNum: number = 1;
-  produtDetals: undefined | products;
+  produtDetals: products | undefined;
   removeCart: boolean = false;
+  cartData: products;
   constructor(private route: ActivatedRoute,
     private apiService: ApisService,
     private router: Router) { }
@@ -50,8 +51,22 @@ export class ProductDetailsComponent {
   }
 
   removeToCart(productId) {
-    this.apiService.removeCart(productId);
+    if (!localStorage.getItem('users')) {
+      this.apiService.removeCart(productId);
+      this.removeCart = false;
+    } else {
+      this.apiService.removeToCart(this.cartData?.id).subscribe((res) => {
+        if (res) {
+          let localData = JSON.parse(localStorage.getItem('users'));
+          let userId = localData && localData[0].id;
+          this.apiService.getCartItems(userId);
+          console.log("removed from cart");
+        }
+      })
+    }
+
     this.removeCart = false;
+
   }
 
   ngOnInit() {
@@ -76,8 +91,9 @@ export class ProductDetailsComponent {
       this.apiService.getCartItems(userId);
       this.apiService.cartItems.subscribe((res) => {
         if (res) {
-          let item = res.filter((item: products) => id == item.id.toString());
-          if (item) {
+          let items = res.filter((item: products) => id == item.productId.toString());
+          if (items.length) {
+            this.cartData = items[0]
             this.removeCart = true;
           }
         }
